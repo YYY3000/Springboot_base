@@ -1,0 +1,29 @@
+server:
+  #端口号
+  port: 8080
+  #项目名，如果不设定，默认是 /
+  context-path:
+
+configuration:
+  count: 10
+  connections:
+    - dataType: SqlServer
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      url: jdbc:sqlserver://ip:port;DatabaseName=dataName
+      username: dtauser
+      password: dtauser
+    - dataType: MySql
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://ip:port/dataName
+      username:
+      password:
+    - dataType: GBase
+      driver-class-name:
+      url:
+      username:
+      password:
+    - dataType: GreenPlum
+      driver-class-name:
+      url:
+      username:
+      password:
