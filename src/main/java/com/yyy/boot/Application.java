@@ -1,4 +1,4 @@
-package com.mastercom.commqry;
+package com.yyy.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

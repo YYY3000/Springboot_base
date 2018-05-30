@@ -1,4 +1,4 @@
-package com.mastercom.commqry.po;
+package com.yyy.boot.po;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
