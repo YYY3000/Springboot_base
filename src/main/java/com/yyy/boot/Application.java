@@ -11,7 +11,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication application = new SpringApplication(Application.class);
+        // ApplicationInitListener addListeners或 ApplicationInitListener使用@Component注解
+        //application.addListeners(new ApplicationInitListener());
+        application.run(args);
     }
 
 }

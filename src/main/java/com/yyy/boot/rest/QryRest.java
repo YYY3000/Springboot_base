@@ -1,11 +1,12 @@
 package com.yyy.boot.rest;
 
 import com.yyy.boot.po.ConfigPO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * @author yinyiyun
@@ -13,16 +14,17 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @EnableAutoConfiguration
-@RequestMapping("/qry")
+@RequestMapping("/test")
 public class QryRest {
 
-    @Autowired
+    @Resource
     private ConfigPO configPO;
 
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public void get() {
+    @RequestMapping(method = RequestMethod.GET)
+    public Object get() {
         System.out.println(configPO.getCount());
         System.out.println(configPO.getConnections());
+        return configPO;
     }
 
 }
